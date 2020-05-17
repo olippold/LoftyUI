@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4685E18D240176E0006A86FA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685E18C240176E0006A86FA /* ImagePicker.swift */; };
 		46E943A423B7AA5200264AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943A323B7AA5200264AB7 /* AppDelegate.swift */; };
 		46E943A623B7AA5200264AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943A523B7AA5200264AB7 /* SceneDelegate.swift */; };
 		46E943A923B7AA5200264AB7 /* LoftyUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E943A723B7AA5200264AB7 /* LoftyUI.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4685E18C240176E0006A86FA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		46E943A023B7AA5200264AB7 /* LoftyUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoftyUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E943A323B7AA5200264AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E943A523B7AA5200264AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				46E943A523B7AA5200264AB7 /* SceneDelegate.swift */,
 				46E943AA23B7AA5200264AB7 /* ContentView.swift */,
 				46E943C823B7AAC700264AB7 /* DetailView.swift */,
+				4685E18C240176E0006A86FA /* ImagePicker.swift */,
 				46E943AC23B7AA5200264AB7 /* Assets.xcassets */,
 				46E943B123B7AA5200264AB7 /* LaunchScreen.storyboard */,
 				46E943B423B7AA5200264AB7 /* Info.plist */,
@@ -217,6 +220,7 @@
 				46E943A923B7AA5200264AB7 /* LoftyUI.xcdatamodeld in Sources */,
 				46E943A423B7AA5200264AB7 /* AppDelegate.swift in Sources */,
 				46E943AB23B7AA5200264AB7 /* ContentView.swift in Sources */,
+				4685E18D240176E0006A86FA /* ImagePicker.swift in Sources */,
 				46E943C923B7AAC700264AB7 /* DetailView.swift in Sources */,
 				46E943A623B7AA5200264AB7 /* SceneDelegate.swift in Sources */,
 			);

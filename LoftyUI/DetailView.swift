@@ -14,12 +14,25 @@ struct DetailView: View {
     
     @State private var itemName = ""
     @State private var itemDescription = ""
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
     
     var body: some View {
         NavigationView {
-            Form {
+            VStack {
                 TextField("Item Name", text: $itemName)
                 TextField("Description", text: $itemDescription)
+                ZStack {
+                    Rectangle()
+                        .fill(Color.secondary)
+                    Text("Tap to select a picture")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                }
+                .onTapGesture {
+                    self.showingImagePicker = true
+                }
+                
             }
             .navigationBarTitle("Add new item")
             .navigationBarItems(trailing: Button("Save") {
@@ -29,6 +42,9 @@ struct DetailView: View {
                 try? self.moc.save()
                 self.presentationMode.wrappedValue.dismiss()
             })
+                .sheet(isPresented: $showingImagePicker) {
+                    ImagePicker(image: self.$inputImage)
+            }
         }
     }
 }
