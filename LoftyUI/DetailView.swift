@@ -21,7 +21,11 @@ struct DetailView: View {
         NavigationView {
             VStack {
                 TextField("Item Name", text: $itemName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
                 TextField("Description", text: $itemDescription)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
@@ -35,13 +39,17 @@ struct DetailView: View {
                 
             }
             .navigationBarTitle("Add new item")
-            .navigationBarItems(trailing: Button("Save") {
-                let newItem = Inventory(context: self.moc)
-                newItem.itemName = self.itemName
-                newItem.itemDescription = self.itemDescription
-                try? self.moc.save()
-                self.presentationMode.wrappedValue.dismiss()
+            .navigationBarItems(
+                leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss()},
+                trailing:
+                Button("Save") {
+                    let newItem = Inventory(context: self.moc)
+                    newItem.itemName = self.itemName
+                    newItem.itemDescription = self.itemDescription
+                    try? self.moc.save()
+                    self.presentationMode.wrappedValue.dismiss()
             })
+                
                 .sheet(isPresented: $showingImagePicker) {
                     ImagePicker(image: self.$inputImage)
             }
