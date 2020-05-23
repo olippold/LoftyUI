@@ -33,32 +33,8 @@ struct ContentView: View {
                     }
                     .onDelete(perform: deleteItem)
                 }
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: { self.showingDetailView = true },
-                               label:
-                            /*{ Image(systemName: "plus.circle.fill")
-                                .resizable()
-                                .frame(width: 77, height: 70)
-                                .foregroundColor(Color.blue)
-                                .shadow(color: Color.black.opacity(0.3), radius: 3, x: 3, y: 3)
-
-                        } */
-                            { Text("+")
-                                .font(.system(.largeTitle))
-                                .frame(width: 77, height: 70)
-                                .foregroundColor(Color.white)
-                                .padding(.bottom, 7)
-                        }
-                        )
-                            .background(Color.blue)
-                            .cornerRadius(38.5)
-                            .padding()
-                            .shadow(color: Color.black.opacity(0.3), radius: 3, x: 3, y: 3)
-                    }
-                }
+                //FloatingButton(buttonText: "+", buttonWasPressed: $showingDetailView)
+                FloatingImageButton(buttonImage: "plus.circle.fill", buttonWasPressed: $showingDetailView)
                 .navigationBarTitle("Lofty")
                 .navigationBarItems(leading: EditButton())
                 
