@@ -16,6 +16,7 @@ struct DetailView: View {
     @State private var itemDescription = ""
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var image: Image?
     
     var body: some View {
         NavigationView {
@@ -26,12 +27,25 @@ struct DetailView: View {
                 TextField("Description", text: $itemDescription)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                TextView(text: $itemDescription)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    // .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .padding()
+                
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
-                    Text("Tap to select a picture")
-                        .foregroundColor(.white)
-                        .font(.headline)
+                    
+                    if image != nil {
+                        image?
+                            .resizable()
+                            .scaledToFit()
+                    } else {
+                        Text("Tap to select a picture")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                    }
+                    
                 }
                 .onTapGesture {
                     self.showingImagePicker = true
@@ -46,14 +60,27 @@ struct DetailView: View {
                     let newItem = Inventory(context: self.moc)
                     newItem.itemName = self.itemName
                     newItem.itemDescription = self.itemDescription
+                    
+                    if let imageData = self.inputImage?.pngData() {
+                        newItem.image = imageData
+                    }
+                    
                     try? self.moc.save()
                     self.presentationMode.wrappedValue.dismiss()
             })
                 
-                .sheet(isPresented: $showingImagePicker) {
+                .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
                     ImagePicker(image: self.$inputImage)
             }
         }
+        
+        
+    }
+    
+    func loadImage()
+    {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
 }
 
