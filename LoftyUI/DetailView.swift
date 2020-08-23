@@ -27,11 +27,11 @@ struct DetailView: View {
                 TextField("Description", text: $itemDescription)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                TextView(text: $itemDescription)
+                /*TextView(text: $itemDescription)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     // .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .padding()
-                
+                    .padding() */
+                 
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
@@ -60,6 +60,9 @@ struct DetailView: View {
                     let newItem = Inventory(context: self.moc)
                     newItem.itemName = self.itemName
                     newItem.itemDescription = self.itemDescription
+                    
+                    //slet imageInstance = UIImage(context: self.moc)
+                    //imageInstance.img =
                     
                     if let imageData = self.inputImage?.pngData() {
                         newItem.image = imageData

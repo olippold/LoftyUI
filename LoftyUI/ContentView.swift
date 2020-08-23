@@ -26,6 +26,12 @@ struct ContentView: View {
                                     Text(item.itemName ?? "Unknown Item")
                                         .font(.headline)
                                     Text(item.itemDescription ?? "Unknown Description")
+                                    //Image(data: item.image)
+                                    Image(uiImage: UIImage(data: item.image ?? Data())!)
+                                        .resizable()
+                                    .scaledToFit()
+                                        .frame(width: 80, height: 50)
+                                    
                                 }
                             }
                         }

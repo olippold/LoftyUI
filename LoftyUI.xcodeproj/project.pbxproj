@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4629B25F24F295FE00C1A511 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4629B25E24F295FE00C1A511 /* ImageExtension.swift */; };
 		4685E18D240176E0006A86FA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685E18C240176E0006A86FA /* ImagePicker.swift */; };
 		4688D7752479623700100E6F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4688D7742479623700100E6F /* FloatingButton.swift */; };
 		4688D7772479691100100E6F /* FloatingImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4688D7762479691100100E6F /* FloatingImageButton.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4629B25E24F295FE00C1A511 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		4685E18C240176E0006A86FA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4688D7742479623700100E6F /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		4688D7762479691100100E6F /* FloatingImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingImageButton.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				46E943A323B7AA5200264AB7 /* AppDelegate.swift */,
 				46E943A523B7AA5200264AB7 /* SceneDelegate.swift */,
 				46E943AA23B7AA5200264AB7 /* ContentView.swift */,
+				4629B25E24F295FE00C1A511 /* ImageExtension.swift */,
 				46B959C424A8ADAE0038C1E5 /* TextView.swift */,
 				4688D7742479623700100E6F /* FloatingButton.swift */,
 				4688D7762479691100100E6F /* FloatingImageButton.swift */,
@@ -229,6 +232,7 @@
 				46E943A923B7AA5200264AB7 /* LoftyUI.xcdatamodeld in Sources */,
 				46E943A423B7AA5200264AB7 /* AppDelegate.swift in Sources */,
 				4688D7752479623700100E6F /* FloatingButton.swift in Sources */,
+				4629B25F24F295FE00C1A511 /* ImageExtension.swift in Sources */,
 				46E943AB23B7AA5200264AB7 /* ContentView.swift in Sources */,
 				4685E18D240176E0006A86FA /* ImagePicker.swift in Sources */,
 				46E943C923B7AAC700264AB7 /* DetailView.swift in Sources */,
