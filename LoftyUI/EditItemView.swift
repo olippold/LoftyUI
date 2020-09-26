@@ -1,42 +1,43 @@
 //
-//  DetailView.swift
+//  EditItemView.swift
 //  LoftyUI
 //
-//  Created by Oliver Lippold on 28/12/2019.
-//  Copyright © 2019 Oliver Lippold. All rights reserved.
+//  Created by Oliver Lippold on 19/09/2020.
+//  Copyright © 2020 Oliver Lippold. All rights reserved.
 //
 
 import SwiftUI
 
-struct DetailView: View {
-    @Environment(\.managedObjectContext) var moc
+struct EditItemView: View {
+    //@Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var itemName = ""
+    //@Binding var item: Inventory
+    var item: Inventory
+    //@State private var item: Inventory!
+    /*@State private var itemName = ""
     @State private var itemDescription = ""
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
-    @State private var image: Image?
+    @State private var image: Image? */
     
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Item Name", text: $itemName)
+                /*TextField("Item Name", text: item.itemName )
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                TextField("Description", text: $itemDescription)
+                TextField("Description", text: item.itemDescription)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                /*TextView(text: $itemDescription)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    // .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .padding() */
+                Text(item.itemName)
+                Text(item.itemDescription)
                  
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
                     
-                    if image != nil {
+                    /*if image != nil {
                         image?
                             .resizable()
                             .scaledToFit()
@@ -44,25 +45,23 @@ struct DetailView: View {
                         Text("Tap to select a picture")
                             .foregroundColor(.white)
                             .font(.headline)
-                    }
+                    } */
                     
                 }
-                .onTapGesture {
+                /*.onTapGesture {
                     self.showingImagePicker = true
-                }
+                } */
                 
             }
-            .navigationBarTitle("Add new item")
-            .navigationBarItems(
+            .navigationBarTitle("Edit item")
+            /*.navigationBarItems(
                 leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss()},
                 trailing:
                 Button("Save") {
+                    // todo: this will need to change!
                     let newItem = Inventory(context: self.moc)
                     newItem.itemName = self.itemName
                     newItem.itemDescription = self.itemDescription
-                    
-                    //slet imageInstance = UIImage(context: self.moc)
-                    //imageInstance.img =
                     
                     if let imageData = self.inputImage?.pngData() {
                         newItem.image = imageData
@@ -70,25 +69,26 @@ struct DetailView: View {
                     
                     try? self.moc.save()
                     self.presentationMode.wrappedValue.dismiss()
-            })
+            }) */
                 
-                .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-                    ImagePicker(image: self.$inputImage)
+                /*.sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                    ImagePicker(image: self.$inputImage) */
             }
         }
         
-        
-    }
+    //}
     
-    func loadImage()
+    /*func loadImage()
     {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-    }
+    } */
 }
 
-struct DetailView_Previews: PreviewProvider {
+/*struct EditItemView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        EditItemView(item: Inventory())
     }
-}
+} */
+ 
+

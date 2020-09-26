@@ -20,12 +20,12 @@ struct ContentView: View {
             ZStack {
                 List {
                     ForEach(loftItems, id: \.self) { item in
-                        NavigationLink(destination: Text(item.itemName ?? "Unknown Item")) {
+                        NavigationLink(destination: EditItemView(item: item)) {
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text(item.itemName ?? "Unknown Item")
+                                    Text(item.itemName)
                                         .font(.headline)
-                                    Text(item.itemDescription ?? "Unknown Description")
+                                    Text(item.itemDescription)
                                     //Image(data: item.image)
                                     Image(uiImage: UIImage(data: item.image ?? Data())!)
                                         .resizable()
@@ -46,7 +46,7 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: $showingDetailView) {
-                DetailView().environment(\.managedObjectContext, self.moc)
+                AddItemView().environment(\.managedObjectContext, self.moc)
             }
             
         }

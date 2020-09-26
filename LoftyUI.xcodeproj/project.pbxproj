@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4629B25F24F295FE00C1A511 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4629B25E24F295FE00C1A511 /* ImageExtension.swift */; };
+		467E0781251640C700D236E1 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E0780251640C700D236E1 /* EditItemView.swift */; };
 		4685E18D240176E0006A86FA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685E18C240176E0006A86FA /* ImagePicker.swift */; };
 		4688D7752479623700100E6F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4688D7742479623700100E6F /* FloatingButton.swift */; };
 		4688D7772479691100100E6F /* FloatingImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4688D7762479691100100E6F /* FloatingImageButton.swift */; };
 		46B959C524A8ADAE0038C1E5 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B959C424A8ADAE0038C1E5 /* TextView.swift */; };
+		46DD2650251F85D00041BBD7 /* Inventory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DD264E251F85D00041BBD7 /* Inventory+CoreDataClass.swift */; };
+		46DD2651251F85D00041BBD7 /* Inventory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DD264F251F85D00041BBD7 /* Inventory+CoreDataProperties.swift */; };
 		46E943A423B7AA5200264AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943A323B7AA5200264AB7 /* AppDelegate.swift */; };
 		46E943A623B7AA5200264AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943A523B7AA5200264AB7 /* SceneDelegate.swift */; };
 		46E943A923B7AA5200264AB7 /* LoftyUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E943A723B7AA5200264AB7 /* LoftyUI.xcdatamodeld */; };
@@ -20,7 +23,7 @@
 		46E943B023B7AA5200264AB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E943AF23B7AA5200264AB7 /* Preview Assets.xcassets */; };
 		46E943B323B7AA5200264AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E943B123B7AA5200264AB7 /* LaunchScreen.storyboard */; };
 		46E943BE23B7AA5200264AB7 /* LoftyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943BD23B7AA5200264AB7 /* LoftyUITests.swift */; };
-		46E943C923B7AAC700264AB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943C823B7AAC700264AB7 /* DetailView.swift */; };
+		46E943C923B7AAC700264AB7 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943C823B7AAC700264AB7 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +38,13 @@
 
 /* Begin PBXFileReference section */
 		4629B25E24F295FE00C1A511 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		467E0780251640C700D236E1 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		4685E18C240176E0006A86FA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4688D7742479623700100E6F /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		4688D7762479691100100E6F /* FloatingImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingImageButton.swift; sourceTree = "<group>"; };
 		46B959C424A8ADAE0038C1E5 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		46DD264E251F85D00041BBD7 /* Inventory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inventory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46DD264F251F85D00041BBD7 /* Inventory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inventory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		46E943A023B7AA5200264AB7 /* LoftyUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoftyUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E943A323B7AA5200264AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E943A523B7AA5200264AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +57,7 @@
 		46E943B923B7AA5200264AB7 /* LoftyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoftyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E943BD23B7AA5200264AB7 /* LoftyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoftyUITests.swift; sourceTree = "<group>"; };
 		46E943BF23B7AA5200264AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46E943C823B7AAC700264AB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		46E943C823B7AAC700264AB7 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +100,16 @@
 			isa = PBXGroup;
 			children = (
 				46E943A323B7AA5200264AB7 /* AppDelegate.swift */,
+				46DD264E251F85D00041BBD7 /* Inventory+CoreDataClass.swift */,
+				46DD264F251F85D00041BBD7 /* Inventory+CoreDataProperties.swift */,
 				46E943A523B7AA5200264AB7 /* SceneDelegate.swift */,
 				46E943AA23B7AA5200264AB7 /* ContentView.swift */,
 				4629B25E24F295FE00C1A511 /* ImageExtension.swift */,
 				46B959C424A8ADAE0038C1E5 /* TextView.swift */,
 				4688D7742479623700100E6F /* FloatingButton.swift */,
 				4688D7762479691100100E6F /* FloatingImageButton.swift */,
-				46E943C823B7AAC700264AB7 /* DetailView.swift */,
+				46E943C823B7AAC700264AB7 /* AddItemView.swift */,
+				467E0780251640C700D236E1 /* EditItemView.swift */,
 				4685E18C240176E0006A86FA /* ImagePicker.swift */,
 				46E943AC23B7AA5200264AB7 /* Assets.xcassets */,
 				46E943B123B7AA5200264AB7 /* LaunchScreen.storyboard */,
@@ -173,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Oliver Lippold";
 				TargetAttributes = {
 					46E9439F23B7AA5200264AB7 = {
@@ -230,12 +239,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E943A923B7AA5200264AB7 /* LoftyUI.xcdatamodeld in Sources */,
+				46DD2651251F85D00041BBD7 /* Inventory+CoreDataProperties.swift in Sources */,
 				46E943A423B7AA5200264AB7 /* AppDelegate.swift in Sources */,
+				46DD2650251F85D00041BBD7 /* Inventory+CoreDataClass.swift in Sources */,
 				4688D7752479623700100E6F /* FloatingButton.swift in Sources */,
 				4629B25F24F295FE00C1A511 /* ImageExtension.swift in Sources */,
 				46E943AB23B7AA5200264AB7 /* ContentView.swift in Sources */,
+				467E0781251640C700D236E1 /* EditItemView.swift in Sources */,
 				4685E18D240176E0006A86FA /* ImagePicker.swift in Sources */,
-				46E943C923B7AAC700264AB7 /* DetailView.swift in Sources */,
+				46E943C923B7AAC700264AB7 /* AddItemView.swift in Sources */,
 				46B959C524A8ADAE0038C1E5 /* TextView.swift in Sources */,
 				46E943A623B7AA5200264AB7 /* SceneDelegate.swift in Sources */,
 				4688D7772479691100100E6F /* FloatingImageButton.swift in Sources */,
@@ -298,6 +310,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -358,6 +371,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
