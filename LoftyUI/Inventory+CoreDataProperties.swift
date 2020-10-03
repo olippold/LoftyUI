@@ -25,5 +25,11 @@ extension Inventory {
 }
 
 extension Inventory : Identifiable {
-
+    static var example: Inventory {
+        var item = Inventory()
+        item.itemName = "Example Item"
+        item.itemDescription = "A description of my example"
+        return item
+        
+    }
 }

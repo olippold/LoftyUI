@@ -14,16 +14,17 @@ struct ItemRow: View {
     var body: some View {
         NavigationLink(destination: EditItemView(item: item)) {
             HStack {
+                Image(uiImage: UIImage(data: item.image ?? Data())!)
+                    .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 50)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+              
                 VStack(alignment: .leading) {
                     Text(item.itemName)
                         .font(.headline)
                     Text(item.itemDescription)
-                    //Image(data: item.image)
-                    Image(uiImage: UIImage(data: item.image ?? Data())!)
-                        .resizable()
-                    .scaledToFit()
-                        .frame(width: 80, height: 50)
-                    
                 }
             }
         }
@@ -32,6 +33,6 @@ struct ItemRow: View {
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRow(item: Inventory())
+        ItemRow(item: Inventory.example)
     }
 }
