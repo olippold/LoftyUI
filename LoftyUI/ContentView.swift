@@ -20,22 +20,7 @@ struct ContentView: View {
             ZStack {
                 List {
                     ForEach(loftItems, id: \.self) { item in
-                        NavigationLink(destination: EditItemView(item: item)) {
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(item.itemName)
-                                        .font(.headline)
-                                    Text(item.itemDescription)
-                                    //Image(data: item.image)
-                                    Image(uiImage: UIImage(data: item.image ?? Data())!)
-                                        .resizable()
-                                    .scaledToFit()
-                                        .frame(width: 80, height: 50)
-                                    
-                                }
-                            }
-                        }
-                        
+                        ItemRow(item: item)
                     }
                     .onDelete(perform: deleteItem)
                 }
