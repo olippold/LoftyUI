@@ -32,24 +32,30 @@ struct AddItemView: View {
                     // .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .padding() */
                  
-                ZStack {
-                    Rectangle()
-                        .fill(Color.secondary)
-                    
-                    if image != nil {
-                        image?
-                            .resizable()
-                            .scaledToFit()
-                    } else {
-                        Text("Tap to select a picture")
-                            .foregroundColor(.white)
+                if image !=  nil {
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                }
+                
+                Button( action: {
+                    self.showingImagePicker = true
+                }) {
+                    HStack {
+                        Image(systemName: "photo")
+                            .font(.system(size: 20))
+                        
+                        Text("Photo Library")
                             .font(.headline)
                     }
-                    
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding(.horizontal)
                 }
-                .onTapGesture {
-                    self.showingImagePicker = true
-                }
+                
+                Spacer()
                 
             }
             .navigationBarTitle("Add new item")
@@ -61,10 +67,7 @@ struct AddItemView: View {
                     newItem.itemName = self.itemName
                     newItem.itemDescription = self.itemDescription
                     
-                    //slet imageInstance = UIImage(context: self.moc)
-                    //imageInstance.img =
-                    
-                    if let imageData = self.inputImage?.pngData() {
+                    if let imageData = self.inputImage?.jpegData(compressionQuality: 1.0) {
                         newItem.image = imageData
                     }
                     
