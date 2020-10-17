@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct EditItemView: View {
-    //@Environment(\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     
     //@Binding var item: Inventory
-    var item: Inventory
+    @ObservedObject var item: Inventory
     //@State private var item: Inventory!
     /*@State private var itemName = ""
     @State private var itemDescription = ""
@@ -30,10 +30,33 @@ struct EditItemView: View {
                 TextField("Description", text: item.itemDescription)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding() */
-                Text(item.itemName)
-                Text(item.itemDescription)
+                //Text(item.itemName)
+                //Text(item.itemDescription)
+                TextField("Item Name", text: $item.itemName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                TextField("Description", text: $item.itemDescription)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                if let img = item.image {
+                    Image(data: img)!
+                        .resizable()
+                        .scaledToFit()
+                }
+                
+                /*if item.image != nil {
+                    Image(data: item.image)
+                        .resizable()
+                        .scaledToFit()
+                } */
                  
-                ZStack {
+                /*if item.image !=  nil {
+                    Image(data: item.image!)
+                        .resizable()
+                        .scaledToFit()
+                } */
+                /*ZStack {
                     Rectangle()
                         .fill(Color.secondary)
                     
@@ -47,29 +70,28 @@ struct EditItemView: View {
                             .font(.headline)
                     } */
                     
-                }
+                } */
                 /*.onTapGesture {
                     self.showingImagePicker = true
                 } */
                 
             }
-            .navigationBarTitle("Edit item")
-            /*.navigationBarItems(
-                leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss()},
+            .navigationBarTitle("Edit item", displayMode: .inline)
+            .navigationBarItems(
+                //leading: Button("Cancel") { self.presentationMode.wrappedValue.dismiss()},
                 trailing:
                 Button("Save") {
-                    // todo: this will need to change!
-                    let newItem = Inventory(context: self.moc)
+                    /* let newItem = Inventory(context: self.moc)
                     newItem.itemName = self.itemName
                     newItem.itemDescription = self.itemDescription
                     
                     if let imageData = self.inputImage?.pngData() {
-                        newItem.image = imageData
-                    }
+                        newItem.image = imageData */
+                    //}
                     
                     try? self.moc.save()
                     self.presentationMode.wrappedValue.dismiss()
-            }) */
+            })
                 
                 /*.sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
                     ImagePicker(image: self.$inputImage) */
@@ -85,10 +107,10 @@ struct EditItemView: View {
     } */
 }
 
-/*struct EditItemView_Previews: PreviewProvider {
+struct EditItemView_Previews: PreviewProvider {
     static var previews: some View {
         EditItemView(item: Inventory())
     }
-} */
+} 
  
 

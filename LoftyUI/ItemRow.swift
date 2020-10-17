@@ -17,10 +17,13 @@ struct ItemRow: View {
                 Image(uiImage: UIImage(data: item.image ?? Data())!)
                     .resizable()
                 .scaledToFit()
-                .frame(width: 80, height: 50)
+                    .frame(width: 80, height: 50)
+                    //.frame(maxHeight: 300)
+                    .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+                /*.frame(width: 80, height: 50)
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-              
+                    .overlay(Circle().stroke(Color.gray, lineWidth: 2)) */
+                
                 VStack(alignment: .leading) {
                     Text(item.itemName)
                         .font(.headline)
