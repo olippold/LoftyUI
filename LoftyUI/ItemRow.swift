@@ -10,13 +10,18 @@ import SwiftUI
 
 struct ItemRow: View {
     var item: Inventory
+    var image: Image? {
+        guard let data = item.image else { return nil }
+        guard let img = UIImage(data: data) else { return nil }
+        return Image(uiImage: img)
+    }
     
     var body: some View {
         NavigationLink(destination: EditItemView(item: item)) {
             HStack {
-                Image(uiImage: UIImage(data: item.image ?? Data())!)
+                image?
                     .resizable()
-                .scaledToFit()
+                    .scaledToFit()
                     .frame(width: 80, height: 50)
                     //.frame(maxHeight: 300)
                     .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
